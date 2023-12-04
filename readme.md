@@ -1,4 +1,6 @@
-# 🚀 gochat
+# 自己学习创建的仓库，并非自己的代码，若有侵权请联系我删除此仓库
+此项目源代码地址：https://github.com/LockGit/gochat
+# 🚀 gochat 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/LockGit/gochat/issues)
 <img src="https://img.shields.io/badge/gochat-im-green">
 <img src="https://img.shields.io/badge/documentation-yes-brightgreen.svg">
