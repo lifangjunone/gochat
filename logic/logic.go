@@ -13,14 +13,19 @@ import (
 	"runtime"
 )
 
+// Logic 逻辑层结构体
 type Logic struct {
+	// 服务ID
 	ServerId string
 }
 
+// New 逻辑层服务指针对象
 func New() *Logic {
 	return new(Logic)
 }
 
+// Run 启动逻辑层服务
+// Run 通过实现一个指针对象方法来启动服务
 func (logic *Logic) Run() {
 	//read config
 	logicConfig := config.Conf.Logic
