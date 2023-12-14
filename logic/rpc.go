@@ -19,9 +19,11 @@ import (
 	"time"
 )
 
+// RpcLogic 自动的 rpc 业务逻辑服务， 此服务要想运行必须注册到 rpc 服务中
 type RpcLogic struct {
 }
 
+// Register 注册用户 rpc 接口
 func (rpc *RpcLogic) Register(ctx context.Context, args *proto.RegisterRequest, reply *proto.RegisterReply) (err error) {
 	reply.Code = config.FailReplyCode
 	u := new(dao.User)
@@ -58,6 +60,7 @@ func (rpc *RpcLogic) Register(ctx context.Context, args *proto.RegisterRequest, 
 	return
 }
 
+// Login 登陆用户rpc 接口
 func (rpc *RpcLogic) Login(ctx context.Context, args *proto.LoginRequest, reply *proto.LoginResponse) (err error) {
 	reply.Code = config.FailReplyCode
 	u := new(dao.User)

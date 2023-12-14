@@ -99,22 +99,30 @@ func Init() {
 		if err != nil {
 			panic(err)
 		}
+		// 设置多个配置文件
 		viper.SetConfigName("/logic")
+		// 合并配置文件
 		err = viper.MergeInConfig()
 		if err != nil {
 			panic(err)
 		}
+		// 设置配置文件
 		viper.SetConfigName("/api")
+		// 合并配置文件
 		err = viper.MergeInConfig()
 		if err != nil {
 			panic(err)
 		}
+		// 设置配置文件
 		viper.SetConfigName("/site")
+		// 合并配置文件
 		err = viper.MergeInConfig()
 		if err != nil {
 			panic(err)
 		}
+		// 创建一个配置对象
 		Conf = new(Config)
+		// 将配置文件中的值赋值给Conf对象
 		viper.Unmarshal(&Conf.Common)
 		viper.Unmarshal(&Conf.Connect)
 		viper.Unmarshal(&Conf.Task)
@@ -134,6 +142,7 @@ func GetMode() string {
 	return env
 }
 
+// GetGinRunMode 获取 Gin 服务运行模式
 func GetGinRunMode() string {
 	env := GetMode()
 	//gin have debug,test,release mode
